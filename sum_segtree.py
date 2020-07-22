@@ -65,7 +65,9 @@ n,m = list(map(int,input().strip().split()))[0:2]
 
 v = list(map(int,input().strip().split()))[0:n]
 
-st = SegTree(n+1)
+st = SegTree(n+1)    
+# using the size one more than the aray because we mean sum in range [l,r] does not incluse rth element(in question) so to include nth term we create
+#a seg tree with n+1 size
 st.build(v)
 
 # st.print_Tree()
